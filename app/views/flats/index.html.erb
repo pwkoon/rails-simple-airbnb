@@ -1,0 +1,31 @@
+<div class="container mt-0">
+  <h2>All our Flats</h2>
+  <h4><em>All <%= @flats.count %> flats.</em></h4>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+  <% @flats.each do |flat| %>
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://images.unsplash.com/photo-1469022563428-aa04fef9f5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80"
+             class="card-img-top"
+             alt="Skyscrapers"/>
+        <div class="card-body">
+          <h5 class="card-title"><%= flat.name %></h5>
+          <p class="card-text"><%= flat.address %></p>
+          <p><i class="fa-solid fa-dollar-sign"></i><%= flat.price_per_night %>  &nbsp  <i class="fa-solid fa-user-astronaut"></i><%= flat.number_of_guests %></p>
+        </div>
+        <div class="card-footer">
+          <div class="flex justify-content-start">
+          <div class="row">
+          <small class="col-3 text-muted"><%= link_to "More info", flat_path(flat) %></small>
+          <small class="col-2 text-muted"><%= link_to "Edit", edit_flat_path(flat) %></small>
+          <small class="col-2 text-muted">
+          <%= link_to "Delete", flat_path(flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+          </small>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
