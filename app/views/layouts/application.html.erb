@@ -12,9 +12,9 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/flats">Simple Airbnb</a>
+      <a class="navbar-brand text-white" href="/flats">Simple Airbnb</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -28,13 +28,13 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link text-white" href="#">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+            <a class="nav-link disabled text-white">Disabled</a>
           </li>
         </ul>
         <form class="d-flex input-group w-auto">
@@ -44,12 +44,14 @@
             placeholder="Hotel 168"
             aria-label="Search"/>
           <button
-            class="btn btn-outline-primary"
+            class="btn btn-outline-primary text-white"
             type="button"
             data-mdb-ripple-color="dark">
             Search
           </button>
         </form>
+        &nbsp
+        <a href="/flats/new" class="btn btn-secondary btn-danger active" role="button" aria-pressed="true">Add Flat</a>
       </div>
     </div>
     </nav>

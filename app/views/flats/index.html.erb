@@ -1,3 +1,4 @@
+<div class="bg-success bg-gradient">
 <div class="container mt-0">
   <h2>All our Flats</h2>
   <h4><em>All <%= @flats.count %> flats.</em></h4>
@@ -6,8 +7,8 @@
     <div class="col">
       <div class="card h-100">
         <img src="https://images.unsplash.com/photo-1469022563428-aa04fef9f5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80"
-             class="card-img-top"
-             alt="Skyscrapers"/>
+             class="card-img-top w-100"
+             alt="Skyscrapers">
         <div class="card-body">
           <h5 class="card-title"><%= flat.name %></h5>
           <p class="card-text"><%= flat.address %></p>
@@ -28,4 +29,5 @@
     </div>
   <% end %>
   </div>
+</div>
 </div>
